@@ -63,7 +63,7 @@ static const GUID kMozcProfile = {
 #endif
 
 // Represents the language ID of this text service.
-const LANGID kTextServiceLanguage = MAKELANGID(LANG_JAPANESE, SUBLANG_DEFAULT);
+const LANGID kTextServiceLanguage = MAKELANGID(LANG_FRENCH, SUBLANG_DEFAULT);
 
 }  // namespace
 

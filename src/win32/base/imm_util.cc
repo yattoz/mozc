@@ -83,7 +83,7 @@ bool GetDefaultLayout(LAYOUTORTIPPROFILE *profile) {
 }
 
 const wchar_t kTIPKeyboardKey[] = L"Software\\Microsoft\\CTF\\Assemblies\\"
-                                  L"0x00000411\\"
+                                  L"0x0000040c\\"
                                   L"{34745C63-B2F0-4784-8B67-5E12C8701A31}";
 
 bool IsDefaultWin8() {
@@ -116,7 +116,7 @@ bool SetDefaultWin8() {
     return E_OUTOFMEMORY;
   }
 
-  const std::wstring &profile = std::wstring(L"0x0411:") + clsid + profile_id;
+  const std::wstring &profile = std::wstring(L"0x040c:") + clsid + profile_id;
   if (!::InstallLayoutOrTip(profile.c_str(), 0)) {
     DLOG(ERROR) << "InstallLayoutOrTip failed";
     return false;
@@ -172,7 +172,7 @@ bool ImeUtil::IsDefault() {
     // A valid |profile.szId| should consists of language ID (LANGID) and
     // keyboard layout ID (KILD) as follows.
     //  <LangID 1>:<KLID 1>
-    //       "0411:E0200411"
+    //       "040c:E020040c"
     // Check if |id.size()| is expected.
     if (id.size() != 13) {
       return false;
@@ -213,7 +213,7 @@ bool ImeUtil::SetDefault() {
     return false;
   }
 
-  const std::wstring &profile_list = L"0x0411:0x" + mozc_klid.ToString();
+  const std::wstring &profile_list = L"0x040c:0x" + mozc_klid.ToString();
   if (!::SetDefaultLayoutOrTip(profile_list.c_str(), 0)) {
     DLOG(ERROR) << "SetDefaultLayoutOrTip failed";
     return false;

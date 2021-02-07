@@ -288,8 +288,8 @@ const KeyEvent::SpecialKey kSpecialKeyMap[] = {
   KeyEvent::NO_SPECIALKEY,        // 0xDA:
   KeyEvent::NO_SPECIALKEY,        // 0xDB: VK_OEM_4
   KeyEvent::NO_SPECIALKEY,        // 0xDC: VK_OEM_5
-  KeyEvent::NO_SPECIALKEY,        // 0xDD: VK_OEM_6
-  KeyEvent::NO_SPECIALKEY,        // 0xDE: VK_OEM_7
+  KeyEvent::NO_SPECIALKEY,        // 0xDD: VK_OEM_6 - on French keybaords it's ^. Maybe there's a way to avoid passing this key through the IME???
+  KeyEvent::HANKAKU,              // 0xDE: VK_OEM_7 - on French keyboards it's ², no one uses that
   KeyEvent::NO_SPECIALKEY,        // 0xDF: VK_OEM_8
   KeyEvent::NO_SPECIALKEY,        // 0xE0:
   KeyEvent::NO_SPECIALKEY,        // 0xE1: VK_OEM_AX

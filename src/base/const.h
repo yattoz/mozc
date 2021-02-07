@@ -50,7 +50,7 @@ const int kSafeIMENameLengthForNTInTchars = 64;
 // 16 TCHARs.
 const int kIMEUIwndClassNameLimitInTchars = 16;
 
-const wchar_t kDefaultKeyboardLayout[] = L"00000411";
+const wchar_t kDefaultKeyboardLayout[] = L"0000040c";
 
 #ifdef GOOGLE_JAPANESE_INPUT_BUILD
 const char kCompanyNameInEnglish[] = "Google";
